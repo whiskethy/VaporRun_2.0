@@ -16,12 +16,12 @@ public class PlayerDeath : MonoBehaviour
     public void KillPlayer()
     {
         gameManager = FindObjectOfType<GameManager>();
-        this.GetComponent<MeshRenderer>().enabled = false;
+        //this.GetComponent<MeshRenderer>().enabled = false;
         Destroy(warpLines);
         Destroy(worldWarpLines);
         Destroy(healthText);
-        gameManager.audioManager.PlaySound("PlayerDeath");
-        Instantiate(explosionEffect, this.transform.position, Quaternion.identity);
+        //gameManager.audioManager.PlaySound("PlayerDeath");
+        //Instantiate(explosionEffect, this.transform.position, Quaternion.identity);
 		model.GetComponent<MeshRenderer>().enabled = false;
     }
 }

@@ -40,7 +40,7 @@ public class ObjectGenerator : MonoBehaviour {
 		for(int i = 0; i < 16; i++)
 		{
 			xLocation = 0.0f;
-			yLocation = 3.5f;
+			yLocation = 10.5f;
 
 			this.transform.position = new Vector3(xLocation, yLocation, this.transform.position.z);
 
