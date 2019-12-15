@@ -12,14 +12,11 @@ public class Collisions : MonoBehaviour {
 
 	private BoxScript box;
 	private HealthNodeScript node;
-	public TutorialManager tutorialManager;
-
 	void Start()
 	{
 		gameManager = FindObjectOfType<GameManager>();
 		healthManager = gameManager.GetComponent<HealthManager>();
 		scoreManager = gameManager.GetComponent<ScoreManager>();
-		tutorialManager = FindObjectOfType<TutorialManager>();
 	}
 
 	void OnCollisionEnter(Collision collision)
@@ -29,7 +26,7 @@ public class Collisions : MonoBehaviour {
 		{
 			//Debug.Log("You hit a block");
 			box = collision.gameObject.GetComponent<BoxScript>();
-			gameManager.audioManager.PlaySound("BlockBreak");
+			//gameManager.audioManager.PlaySound("BlockBreak");
 			healthManager.TakeDamage(box.blockHealth);
 
 			scoreManager.AddPoints(box.blockHealth * 10);
@@ -41,7 +38,7 @@ public class Collisions : MonoBehaviour {
 			//Debug.Log("You hit a healthNode");
 
 			node = collision.gameObject.GetComponent<HealthNodeScript>();
-			gameManager.audioManager.PlaySound("NodePickup");
+			//gameManager.audioManager.PlaySound("NodePickup");
 			healthManager.GiveHealth(node.nodeHealth);
 			Destroy(collision.gameObject);
 		}
@@ -54,14 +51,5 @@ public class Collisions : MonoBehaviour {
 		{
 
 		}
-    }
-
-	void OnTriggerEnter(Collider other)
-    {
-		
-        if(other.gameObject.tag == "TutorialObject")
-        {
-            tutorialManager.showNext = true;
-        }
     }
 }
