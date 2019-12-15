@@ -8,12 +8,13 @@ public class ObjectGenerator : MonoBehaviour {
 	public GameObject Node;
 	public GameObject Wall;
 	public Transform generationPoint;
-
+	public float TubeRadius = 11.0f;
 	private float xLocation;
 	private float yLocation;
 	public int wallSpawnRate = 5;
 	public int nodeSpawnRate = 5;
 	public int blockSpawnRate = 5;
+	
 	//private float zLocation;
 	//private float zRotation;
 
@@ -40,7 +41,7 @@ public class ObjectGenerator : MonoBehaviour {
 		for(int i = 0; i < 16; i++)
 		{
 			xLocation = 0.0f;
-			yLocation = 10.5f;
+			yLocation = TubeRadius;
 
 			this.transform.position = new Vector3(xLocation, yLocation, this.transform.position.z);
 
