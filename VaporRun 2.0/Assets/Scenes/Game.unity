@@ -453,8 +453,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357639555}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 61.34}
-  m_LocalScale: {x: 7.5, y: 68.35, z: 7.5}
+  m_LocalPosition: {x: -0, y: 0, z: 72.85}
+  m_LocalScale: {x: 7.5, y: 76.82, z: 7.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -726,6 +726,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1180907205}
   - component: {fileID: 1180907206}
+  - component: {fileID: 1180907208}
+  - component: {fileID: 1180907207}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -764,6 +766,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystick: {fileID: 1936054130}
   model: {fileID: 297028778}
+--- !u!114 &1180907207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180907204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea86658f8d91df74da1ea84a025be5ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthManager: {fileID: 0}
+  warpLines: {fileID: 0}
+  worldWarpLines: {fileID: 0}
+  model: {fileID: 0}
+  healthText: {fileID: 0}
+  explosionEffect: {fileID: 0}
+--- !u!114 &1180907208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180907204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8965f0b3cec23944b690b2491256f70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  tutorialManager: {fileID: 0}
 --- !u!1 &1257471306
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +808,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1257471308}
   - component: {fileID: 1257471307}
+  - component: {fileID: 1257471312}
+  - component: {fileID: 1257471311}
+  - component: {fileID: 1257471310}
   - component: {fileID: 1257471309}
   m_Layer: 0
   m_Name: GameManager
@@ -831,6 +868,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 0}
   sounds: []
+--- !u!114 &1257471310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257471306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6490b9afc693be0468bf09282e06d34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceTraveledText: {fileID: 0}
+  timeText: {fileID: 0}
+  speedText: {fileID: 0}
+  speed: 0
+--- !u!114 &1257471311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257471306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da95b976bf53f00418a32455edf02f95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
+  playerScore: 0
+  pointThreshold: 1000
+--- !u!114 &1257471312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257471306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a4893363a0b6147815ea8542022f4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthText: {fileID: 0}
+  currentHealth: 0
+  startingHealth: 10
+  playerObject: {fileID: 1180907204}
 --- !u!1 &1293797976
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,13 +993,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293797976}
-  m_LocalRotation: {x: 0.10157721, y: -0, z: -0, w: 0.9948277}
-  m_LocalPosition: {x: 0, y: 3.2800002, z: -8.49}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.12360149, y: 0, z: 0, w: 0.992332}
+  m_LocalPosition: {x: 0, y: 2.92, z: -6.32}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 1180907205}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 11.66, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 14.2, y: 0, z: 0}
 --- !u!114 &1293797980
 MonoBehaviour:
   m_ObjectHideFlags: 0
