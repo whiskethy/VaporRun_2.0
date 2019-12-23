@@ -15,6 +15,6 @@ public class MoveBackScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		rb.MovePosition(transform.position - transform.forward * Time.fixedDeltaTime * gameManager.moveBackSpeed);
+		rb.MovePosition(transform.position - transform.forward * Time.fixedDeltaTime * -Application.targetFrameRate * gameManager.moveBackSpeed);
 	}
 }
