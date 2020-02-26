@@ -531,18 +531,6 @@ Transform:
   m_Father: {fileID: 1180907205}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 6.46, y: 0, z: 0}
---- !u!114 &604237492 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 74296332256302789, guid: 0104cd9282e5aa64f836c8edba150965,
-    type: 3}
-  m_PrefabInstance: {fileID: 1003963688}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6669b2160065e50478339b2530a7a11a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1003963688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -555,6 +543,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 58.14
       objectReference: {fileID: 0}
+    - target: {fileID: 40799243056173592, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -274
+      objectReference: {fileID: 0}
     - target: {fileID: 40799243335672410, guid: 0104cd9282e5aa64f836c8edba150965,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -564,6 +557,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799243347151693, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799243347151693, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799243450492138, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799243450492138, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -73
       objectReference: {fileID: 0}
     - target: {fileID: 40799243597960989, guid: 0104cd9282e5aa64f836c8edba150965,
         type: 3}
@@ -596,6 +609,21 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1257471307}
+    - target: {fileID: 40799244138903941, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799244138903941, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 193
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799244209630762, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 40799244247892523, guid: 0104cd9282e5aa64f836c8edba150965,
         type: 3}
       propertyPath: m_fontAsset
@@ -621,6 +649,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4293132275
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799244509582838, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 40799244613709081, guid: 0104cd9282e5aa64f836c8edba150965,
         type: 3}
@@ -763,10 +796,46 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 40799245101129040, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
+    - target: {fileID: 40799245101129040, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 40799245101129040, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278243798
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799245101129040, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799245101129040, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799245101129040, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799245101129040, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 42212793354311541, guid: 0104cd9282e5aa64f836c8edba150965,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 74296332256302789, guid: 0104cd9282e5aa64f836c8edba150965,
         type: 3}
@@ -963,7 +1032,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48f58487cc75df74e883861d4b4974de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 604237492}
   model: {fileID: 297028778}
 --- !u!114 &1180907207
 MonoBehaviour:
@@ -1066,7 +1134,7 @@ MonoBehaviour:
   moveBackSpeed: 22
   playerMoveSpeed: 56
   gameMusicPitch: 0.65
-  gameOver: 0
+  gamePaused: 0
   speedIncreaseAmount: 1
 --- !u!4 &1257471308
 Transform:
@@ -1095,7 +1163,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 0}
-  sounds: []
+  sounds:
+  - name: Music
+    clip: {fileID: 8300000, guid: 3c6b8797e6fdd924ba52424b985b04b1, type: 3}
+    audioMixer: {fileID: 243079337483164024, guid: 9f9cf896dd547d04a8b3a30d69848aa7,
+      type: 2}
+    volume: 1
+    pitch: 0
 --- !u!114 &1257471310
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour {
 			Debug.Log("No audio manager found in scene!");
 		}
 		gamePaused = false;
+
+		audioManager.PlaySound("Music");
 	}
 	
 	public void KillPlayer()
