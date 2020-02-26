@@ -565,11 +565,89 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 40799243597960989, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
+    - target: {fileID: 40799243597960989, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.9530728
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799243597960989, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799243597960989, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.8915094
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799243597960989, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4293132275
+      objectReference: {fileID: 0}
     - target: {fileID: 40799243718246559, guid: 0104cd9282e5aa64f836c8edba150965,
         type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1257471307}
+    - target: {fileID: 40799244247892523, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
+    - target: {fileID: 40799244247892523, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.9530728
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799244247892523, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799244247892523, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.8915094
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799244247892523, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4293132275
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799244613709081, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
+    - target: {fileID: 40799244613709081, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.9530728
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799244613709081, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799244613709081, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.8915094
+      objectReference: {fileID: 0}
+    - target: {fileID: 40799244613709081, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4293132275
+      objectReference: {fileID: 0}
     - target: {fileID: 40799244977524229, guid: 0104cd9282e5aa64f836c8edba150965,
         type: 3}
       propertyPath: m_Name
@@ -684,6 +762,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 42212793354311541, guid: 0104cd9282e5aa64f836c8edba150965,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 74296332256302789, guid: 0104cd9282e5aa64f836c8edba150965,
         type: 3}
@@ -983,6 +1066,7 @@ MonoBehaviour:
   moveBackSpeed: 22
   playerMoveSpeed: 56
   gameMusicPitch: 0.65
+  gameOver: 0
   speedIncreaseAmount: 1
 --- !u!4 &1257471308
 Transform:

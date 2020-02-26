@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
 	public float moveBackSpeed = 1.1f;
 	public float playerMoveSpeed = 50f;
 	public float gameMusicPitch = .65f;
+	public bool gamePaused = false;
 	[Range (0, 5f)] public float speedIncreaseAmount = 1f;
 
 	// Use this for initialization
@@ -30,11 +31,12 @@ public class GameManager : MonoBehaviour {
 		{
 			Debug.Log("No audio manager found in scene!");
 		}
-		
+		gamePaused = false;
 	}
 	
 	public void KillPlayer()
 	{
+		gamePaused = true;
 		moveBackSpeed = 0f;
 		player.GetComponent<PlayerDeath>().KillPlayer();
 

@@ -25,15 +25,18 @@ public class DistanceTraveled : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distanceTraveled += speed * Time.fixedDeltaTime;
+        if(gameManager.gamePaused == false){
+            distanceTraveled += speed * Time.fixedDeltaTime;
 
-        if(distanceTraveled > distanceThreshold)
-        {
-            gameManager.scoreManager.playerScore += 1;
-            distanceThreshold += 1;
+            if(distanceTraveled > distanceThreshold)
+            {
+                gameManager.scoreManager.playerScore += 1;
+                distanceThreshold += 1;
+            }
+            time += Time.fixedDeltaTime;
         }
 
-        time += Time.fixedDeltaTime;
+        
 
         speedText.text = "V: " + speed.ToString("0") + "m/s";
         distanceTraveledText.text = "Dist: " +distanceTraveled.ToString("0") + "m";

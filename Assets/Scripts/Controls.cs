@@ -6,7 +6,7 @@ public class Controls : MonoBehaviour {
 
 	//public Animator anim;
 	private GameManager gameManager;
-	public Joystick joystick;
+	//public Joystick joystick;
 	public GameObject model;
 
 	float movement = 0f;	
@@ -17,25 +17,27 @@ public class Controls : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		//movement = Input.GetAxisRaw("Horizontal") * gameManager.playerMoveSpeed;
-		if(joystick.Horizontal >= .2f)
-		{
-			//anim.SetBool("isFlyingRight", true);
-			//anim.SetBool("isFlyingLeft", false);
-			movement = joystick.Horizontal * gameManager.playerMoveSpeed;
-		}
-		else if(joystick.Horizontal <= -.2f)
-		{
-			//anim.SetBool("isFlyingLeft", true);
-			//anim.SetBool("isFlyingRight", false);
-			movement = joystick.Horizontal * gameManager.playerMoveSpeed;
-		}
-		else
-		{
-			//anim.SetBool("isFlyingRight", false);
-			//anim.SetBool("isFlyingLeft", false);
-			movement = 0f;
-		}
+		
+		// if(joystick.Horizontal >= .2f)
+		// {
+		// 	//anim.SetBool("isFlyingRight", true);
+		// 	//anim.SetBool("isFlyingLeft", false);
+		// 	movement = joystick.Horizontal * gameManager.playerMoveSpeed;
+		// }
+		// else if(joystick.Horizontal <= -.2f)
+		// {
+		// 	//anim.SetBool("isFlyingLeft", true);
+		// 	//anim.SetBool("isFlyingRight", false);
+		// 	movement = joystick.Horizontal * gameManager.playerMoveSpeed;
+		// }
+		// else
+		// {
+		// 	//anim.SetBool("isFlyingRight", false);
+		// 	//anim.SetBool("isFlyingLeft", false);
+		// 	movement = 0f;
+		// }
+
+		movement = Input.GetAxis("Horizontal") * gameManager.playerMoveSpeed;
 		
 	}
 	private void FixedUpdate()
