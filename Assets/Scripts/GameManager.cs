@@ -34,8 +34,8 @@ public class GameManager : MonoBehaviour {
 		gamePaused = false;
 
 		audioManager.PlaySound("Music");
+		audioManager.AdjustSoundVolume("Music",1);
 	}
-	
 	public void KillPlayer()
 	{
 		gamePaused = true;
