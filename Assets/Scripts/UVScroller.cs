@@ -28,7 +28,7 @@ public class UVScroller : MonoBehaviour {
 		void Update () {
             //rb.MovePosition(transform.position - transform.forward * Time.fixedDeltaTime * -Application.targetFrameRate * gameManager.moveBackSpeed);
 			if(gameManager.gamePaused == false){
-				scrollSpeed.y = (gameManager.moveBackSpeed * Time.fixedDeltaTime * Application.targetFrameRate) / gameManager.moveBackSpeed;
+				scrollSpeed.y = (gameManager.moveBackSpeed * Time.fixedDeltaTime * Application.targetFrameRate) / (gameManager.moveBackSpeed*2);
 
 				offset = offset - ( scrollSpeed );
 				//offset += scrollSpeed * Time.deltaTime * Application.targetFrameRate;
