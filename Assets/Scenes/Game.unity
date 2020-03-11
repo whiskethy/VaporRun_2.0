@@ -372,7 +372,6 @@ GameObject:
   - component: {fileID: 357639558}
   - component: {fileID: 357639557}
   - component: {fileID: 357639556}
-  - component: {fileID: 357639560}
   m_Layer: 0
   m_Name: Tube
   m_TagString: Untagged
@@ -455,20 +454,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &357639560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 357639555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b8bf90f43d726f468330b2ad602ed69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrollSpeed: {x: 0, y: 0}
-  offset: {x: 0, y: 0}
 --- !u!114 &410436953 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 40799244613709081, guid: 0104cd9282e5aa64f836c8edba150965,
