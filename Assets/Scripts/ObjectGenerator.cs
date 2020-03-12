@@ -82,7 +82,7 @@ public class ObjectGenerator : MonoBehaviour {
 			blockSpawnRate += 1;
 			wallSpawnRate += 1;
 		}
-		if(nodeSpawnRate > 4)
+		if(nodeSpawnRate > 7)
 		{
 			nodeSpawnRate -= 1;
 		}
