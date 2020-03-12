@@ -679,14 +679,14 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.127759, g: 0.78462887, b: 0.8207547, a: 1}
+  m_Color: {r: 0.8349056, g: 0.99155766, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1608,7 +1608,7 @@ MonoBehaviour:
   distanceTraveled: {fileID: 1257471310}
   audioManager: {fileID: 0}
   moveBackSpeed: 22
-  playerMoveSpeed: 56
+  playerMoveSpeed: 60
   gameMusicPitch: 0.65
   gamePaused: 0
   speedIncreaseAmount: 1
@@ -1829,7 +1829,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1989510106
 Transform:
   m_ObjectHideFlags: 0
@@ -2138,8 +2138,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283029064
-  m_fontColor: {r: 0.2811944, g: 0.8396226, b: 0.28512067, a: 1}
+    rgba: 4292869599
+  m_fontColor: {r: 0.87375396, g: 0.990566, b: 0.87457657, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
