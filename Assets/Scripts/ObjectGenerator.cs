@@ -77,12 +77,12 @@ public class ObjectGenerator : MonoBehaviour {
 	public void IncreaseDifficulty()
 	{
 		
-		if(wallSpawnRate < 15)
+		if(wallSpawnRate < 16)
 		{
 			blockSpawnRate += 1;
 			wallSpawnRate += 1;
 		}
-		if(nodeSpawnRate > 3)
+		if(nodeSpawnRate > 4)
 		{
 			nodeSpawnRate -= 1;
 		}
