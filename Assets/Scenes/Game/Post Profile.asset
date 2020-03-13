@@ -89,7 +89,6 @@ MonoBehaviour:
   - {fileID: 31601107957576221}
   - {fileID: 4312074750435522874}
   - {fileID: -202938583705643297}
-  - {fileID: 1288876393065012539}
   - {fileID: 6643106462377889059}
   - {fileID: -219315086936609212}
 --- !u!114 &31601107957576221
@@ -108,15 +107,15 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.13
+    m_Value: 0.72
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.23
+    m_Value: 0.18
     min: 0
   scatter:
     m_OverrideState: 1
-    m_Value: 0.291
+    m_Value: 0.16
     min: 0
     max: 1
   clamp:
@@ -139,36 +138,6 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0
     min: 0
---- !u!114 &1288876393065012539
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29fa0085f50d5e54f8144f766051a691, type: 3}
-  m_Name: FilmGrain
-  m_EditorClassIdentifier: 
-  active: 0
-  m_AdvancedMode: 0
-  type:
-    m_OverrideState: 1
-    m_Value: 1
-  intensity:
-    m_OverrideState: 1
-    m_Value: 0.4
-    min: 0
-    max: 1
-  response:
-    m_OverrideState: 1
-    m_Value: 0.8
-    min: 0
-    max: 1
-  texture:
-    m_OverrideState: 1
-    m_Value: {fileID: 0}
 --- !u!114 &4312074750435522874
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -191,12 +160,12 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.121
+    m_Value: 0.079
     min: 0
     max: 1
   clamp:
     m_OverrideState: 1
-    m_Value: 0.05
+    m_Value: 0.037
     min: 0
     max: 0.2
 --- !u!114 &6643106462377889059
@@ -211,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb60a22f311433c4c962b888d1393f88, type: 3}
   m_Name: PaniniProjection
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   distance:
     m_OverrideState: 1
