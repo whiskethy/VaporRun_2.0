@@ -1217,11 +1217,14 @@ MonoBehaviour:
   Block: {fileID: 5274750231376469976, guid: 6507decfd0916cb43a74d661437257cc, type: 3}
   Node: {fileID: 6806140296938650042, guid: 564bbe76f3b3aa44aab6fb82ad48eace, type: 3}
   Wall: {fileID: 246306493987673382, guid: 80c2a05d11a9b5d449adf765b4aef44a, type: 3}
+  BoostPowerUp: {fileID: 8005362330565381924, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+    type: 3}
   generationPoint: {fileID: 2143438860}
   TubeRadius: 11
   wallSpawnRate: 7
   nodeSpawnRate: 10
   blockSpawnRate: 5
+  boostSpawnRate: 1
 --- !u!4 &1104562045
 Transform:
   m_ObjectHideFlags: 0
@@ -1507,6 +1510,8 @@ MonoBehaviour:
   playerMoveSpeed: 60
   gameMusicPitch: 0.65
   gamePaused: 0
+  boostLength: 5
+  currState: 0
   speedIncreaseAmount: 1
 --- !u!4 &1257471308
 Transform:
@@ -1782,7 +1787,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: e007a47bd1a5e584591cbb8236995d4b,
         type: 3}
       propertyPath: m_Name
-      value: Geo_Cube
+      value: Background Cube
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e007a47bd1a5e584591cbb8236995d4b, type: 3}
@@ -2330,3 +2335,91 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 564bbe76f3b3aa44aab6fb82ad48eace, type: 3}
+--- !u!1001 &8005362330901458318
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381920, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381921, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381921, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381921, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 69.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381921, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381921, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381921, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381921, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381921, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381921, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381921, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381921, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381924, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_Name
+      value: BoostPowerUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381924, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8005362330565381924, guid: 1dc6770c52c614c46b1dcb9c8542040c,
+        type: 3}
+      propertyPath: m_TagString
+      value: BoostPowerUp
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1dc6770c52c614c46b1dcb9c8542040c, type: 3}

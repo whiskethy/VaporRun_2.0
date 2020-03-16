@@ -17,11 +17,17 @@ public class GameManager : MonoBehaviour {
 	public float playerMoveSpeed = 50f;
 	public float gameMusicPitch = .65f;
 	public bool gamePaused = false;
+	private float timeStamp;
+	private float timeBoosted;
+	public float boostLength = 5f;
+
+	public enum GAMESTATE{none,normal,boosted};
+	public GAMESTATE currState = GAMESTATE.none;
 	[Range (0, 5f)] public float speedIncreaseAmount = 1f;
 
 	// Use this for initialization
 	void Start () {
-
+		currState = GAMESTATE.normal;
 		scoreManager = GetComponent<ScoreManager>();
 		distanceTraveled = GetComponent<DistanceTraveled>();
 
@@ -36,6 +42,17 @@ public class GameManager : MonoBehaviour {
 		audioManager.PlaySound("Music");
 		audioManager.AdjustSoundVolume("Music",1);
 	}
+	private void Update() {
+		if(currState == GAMESTATE.boosted)
+		{
+			timeStamp+=Time.deltaTime;
+
+			if(timeStamp >= timeBoosted)
+			{
+				unBoost();
+			}
+		}
+	}
 	public void KillPlayer()
 	{
 		gamePaused = true;
@@ -48,6 +65,27 @@ public class GameManager : MonoBehaviour {
 		Invoke("LoadDeathScene", .3f);
 	}
 
+	public void boostPowerUp()
+	{
+		currState = GAMESTATE.boosted;
+		//scoreManager.AddPoints(100);
+
+		moveBackSpeed = moveBackSpeed * 2;
+		distanceTraveled.speed = moveBackSpeed;
+		timeStamp = Time.time;
+		timeBoosted = timeStamp + boostLength;
+		//currState = GAMESTATE.normal;
+		//moveBackSpeed = moveBackSpeed /2;
+	}
+	public void unBoost()
+	{
+		Debug.Log("hey");
+		currState = GAMESTATE.normal;
+		moveBackSpeed = moveBackSpeed / 2;
+		distanceTraveled.speed = moveBackSpeed;
+		//currState = GAMESTATE.normal;
+		//moveBackSpeed = moveBackSpeed /2;
+	}
 	public void LoadDeathScene()
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

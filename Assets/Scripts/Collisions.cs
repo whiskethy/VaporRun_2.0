@@ -21,16 +21,66 @@ public class Collisions : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision)
     {
+		if(gameManager.currState == GameManager.GAMESTATE.normal){
+			normalCollosions(collision);
+		}
+		if(gameManager.currState == GameManager.GAMESTATE.boosted){
+			boostedCollosions(collision);
+		}
+		
+    }
 
+	private void normalCollosions(Collision collision)
+	{
+		if(collision.gameObject.tag == "Block")
+			{
+				//Debug.Log("You hit a block");
+				box = collision.gameObject.GetComponent<BoxScript>();
+				//gameManager.audioManager.PlaySound("BlockBreak");
+				healthManager.TakeDamage(box.blockHealth);
+			
+				scoreManager.AddPoints(box.blockHealth * 10);
+				Destroy(collision.gameObject);
+				
+			}
+			else if(collision.gameObject.tag == "HealthNode")
+			{
+				//Debug.Log("You hit a healthNode");
+
+				node = collision.gameObject.GetComponent<HealthNodeScript>();
+				//gameManager.audioManager.PlaySound("NodePickup");
+				healthManager.GiveHealth(node.nodeHealth);
+				Destroy(collision.gameObject);
+			}
+			else if (collision.gameObject.tag == "Wall")
+			{
+				gameManager.KillPlayer();
+			}
+			else if (collision.gameObject.tag == "BoostPowerUp")
+			{
+				Debug.Log("Power UP!");
+				gameManager.boostPowerUp();
+				healthManager.GiveHealth(100);
+				Destroy(collision.gameObject);
+				//gameManager.KillPlayer();
+			}
+			else
+			{
+
+			}
+
+	}
+	private void boostedCollosions(Collision collision)
+	{
 		if(collision.gameObject.tag == "Block")
 		{
 			//Debug.Log("You hit a block");
 			box = collision.gameObject.GetComponent<BoxScript>();
 			//gameManager.audioManager.PlaySound("BlockBreak");
-			healthManager.TakeDamage(box.blockHealth);
-
+			//healthManager.TakeDamage(box.blockHealth);
+		
 			scoreManager.AddPoints(box.blockHealth * 10);
-        	Destroy(collision.gameObject);
+			Destroy(collision.gameObject);
 			
 		}
 		else if(collision.gameObject.tag == "HealthNode")
@@ -44,12 +94,16 @@ public class Collisions : MonoBehaviour {
 		}
 		else if (collision.gameObject.tag == "Wall")
 		{
-			Debug.Log("You hit a wall");
-			gameManager.KillPlayer();
+			
+		}
+		else if (collision.gameObject.tag == "BoostPowerUp")
+		{
+			Destroy(collision.gameObject);
+			//gameManager.KillPlayer();
 		}
 		else
 		{
 
 		}
-    }
+	}
 }

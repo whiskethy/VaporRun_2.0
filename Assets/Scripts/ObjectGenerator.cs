@@ -7,6 +7,7 @@ public class ObjectGenerator : MonoBehaviour {
 	public GameObject Block;
 	public GameObject Node;
 	public GameObject Wall;
+	public GameObject BoostPowerUp;
 	public Transform generationPoint;
 	public float TubeRadius = 11.0f;
 	private float xLocation;
@@ -14,6 +15,7 @@ public class ObjectGenerator : MonoBehaviour {
 	public int wallSpawnRate = 5;
 	public int nodeSpawnRate = 5;
 	public int blockSpawnRate = 5;
+	public int boostSpawnRate = 1;
 	
 	//private float zLocation;
 	//private float zRotation;
@@ -66,6 +68,9 @@ public class ObjectGenerator : MonoBehaviour {
 			}
 			else if((creationNum >= 60) && (creationNum < (60 + wallSpawnRate))){
 				Instantiate(Wall, this.transform.position, this.transform.rotation);
+			}
+			else if((creationNum >= 10) && (creationNum < (12 + boostSpawnRate))){
+				Instantiate(BoostPowerUp, this.transform.position, this.transform.rotation);
 			}
 			else
 			{
