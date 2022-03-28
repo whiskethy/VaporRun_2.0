@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
 	public ScoreManager scoreManager;
 	public DistanceTraveled distanceTraveled;
 	public AudioManager audioManager;
+	public GameObject speedLines;
 	public float moveBackSpeed = 1.1f;
 	public float playerMoveSpeed = 50f;
 	public float gameMusicPitch = .65f;
@@ -74,6 +75,7 @@ public class GameManager : MonoBehaviour {
 		distanceTraveled.speed = moveBackSpeed;
 		timeStamp = Time.time;
 		timeBoosted = timeStamp + boostLength;
+		speedLines.SetActive(true);
 		//currState = GAMESTATE.normal;
 		//moveBackSpeed = moveBackSpeed /2;
 	}
@@ -83,6 +85,7 @@ public class GameManager : MonoBehaviour {
 		currState = GAMESTATE.normal;
 		moveBackSpeed = moveBackSpeed / 2;
 		distanceTraveled.speed = moveBackSpeed;
+		speedLines.SetActive(false);
 		//currState = GAMESTATE.normal;
 		//moveBackSpeed = moveBackSpeed /2;
 	}

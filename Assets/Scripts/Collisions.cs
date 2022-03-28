@@ -29,7 +29,7 @@ public class Collisions : MonoBehaviour {
 		}
 		
     }
-
+	
 	private void normalCollosions(Collision collision)
 	{
 		if(collision.gameObject.tag == "Block")
@@ -94,7 +94,8 @@ public class Collisions : MonoBehaviour {
 		}
 		else if (collision.gameObject.tag == "Wall")
 		{
-			
+			scoreManager.AddPoints(200);
+			Destroy(collision.gameObject);
 		}
 		else if (collision.gameObject.tag == "BoostPowerUp")
 		{
