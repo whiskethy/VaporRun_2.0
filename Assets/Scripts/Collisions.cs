@@ -77,7 +77,7 @@ public class Collisions : MonoBehaviour {
 			//Debug.Log("You hit a block");
 			box = collision.gameObject.GetComponent<BoxScript>();
 			//gameManager.audioManager.PlaySound("BlockBreak");
-			//healthManager.TakeDamage(box.blockHealth);
+			healthManager.TakeDamage(box.blockHealth/2);
 		
 			scoreManager.AddPoints(box.blockHealth * 10);
 			Destroy(collision.gameObject);
