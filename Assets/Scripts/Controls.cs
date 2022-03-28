@@ -6,6 +6,9 @@ public class Controls : MonoBehaviour {
 
 	//public Animator anim;
 	private GameManager gameManager;
+	public Animator anim;
+	
+	//public enum turningDirection = {left,center,right};
 	//public Joystick joystick;
 	public GameObject model;
 
@@ -39,10 +42,27 @@ public class Controls : MonoBehaviour {
 
 		movement = Input.GetAxis("Horizontal") * gameManager.playerMoveSpeed;
 		
+		
 	}
 	private void FixedUpdate()
 	{
 		transform.RotateAround(Vector3.zero, Vector3.forward, -movement * Time.fixedDeltaTime);
+		Debug.Log(movement);
+		if(movement == 0)
+		{
+			anim.SetBool("isTurning", false);
+			anim.SetInteger("turningDir", 0);
+		}
+		else if(movement < 0)
+		{
+			anim.SetBool("isTurning", true);
+			anim.SetInteger("turningDir", -1);
+		}
+		else if(movement > 0)
+		{
+			anim.SetBool("isTurning", true);
+			anim.SetInteger("turningDir", 1);
+		}
 		//transform.Rotate(new Vector3(0f, movement * Time.fixedDeltaTime * gameManager.playerMoveSpeed, 0f), Space.Self);
 	}
 }
